@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4cbe286-bf06-4aff-99aa-129cb2312cbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BattleShipLab/UserView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/BattleShipViewBoard.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,6 +37,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\achan\IdeaProjects\SharedCSABProjects\src\BattleShipLab" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -55,7 +60,7 @@
       <module name="SharedCSABProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BattleShipLab.*" />
+          <option name="PATTERN" value="BattleShipLab.Controler" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,7 +73,7 @@
       <module name="SharedCSABProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BattleShipLab.*" />
+          <option name="PATTERN" value="BattleShipLab.Controler" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,6 +99,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570648231112</updated>
     </task>
+    <task id="LOCAL-00001" summary="GUI update 1">
+      <created>1573268436365</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573268436365</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,5 +124,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="GUI update 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI update 1" />
   </component>
 </project>

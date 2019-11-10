@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:controller="BattleShipLab.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                minWidth="-Infinity" prefHeight="360.0" prefWidth="360.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         </rowConstraints>
+         <children>
+            <Button fx:id="pos00" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0"/>
+            <Button fx:id="pos01" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1"/>
+            <Button fx:id="pos02" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2"/>
+            <Button fx:id="pos03" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3"/>
+            <Button fx:id="pos04" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4"/>
+            <Button fx:id="pos05" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5"/>
+            <Button fx:id="pos06" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6"/>
+            <Button fx:id="pos07" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7"/>
+            <Button fx:id="pos10" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.rowIndex="1"/>
+            <Button fx:id="pos11" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Button fx:id="pos12" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <Button fx:id="pos13" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+            <Button fx:id="pos14" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+            <Button fx:id="pos15" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+            <Button fx:id="pos16" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
+            <Button fx:id="pos17" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
+            <Button fx:id="pos20" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.rowIndex="2"/>
+            <Button fx:id="pos21" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Button fx:id="pos22" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <Button fx:id="pos23" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            <Button fx:id="pos24" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+            <Button fx:id="pos25" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+            <Button fx:id="pos26" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="2"/>
+            <Button fx:id="pos27" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="2"/>
+            <Button fx:id="pos30" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.rowIndex="3"/>
+            <Button fx:id="pos31" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Button fx:id="pos32" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <Button fx:id="pos33" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+            <Button fx:id="pos34" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+            <Button fx:id="pos35" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="3"/>
+            <Button fx:id="pos36" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="3"/>
+            <Button fx:id="pos37" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="3"/>
+            <Button fx:id="pos40" cancelButton="true" mnemonicParsing="false" onMouseClicked="#handlePositionInput"
+                    prefHeight="49.0" prefWidth="53.0" GridPane.rowIndex="4"/>
+            <Button fx:id="pos41" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Button fx:id="pos42" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+            <Button fx:id="pos43" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+            <Button fx:id="pos44" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+            <Button fx:id="pos45" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="4"/>
+            <Button fx:id="pos46" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="4"/>
+            <Button fx:id="pos47" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="4"/>
+            <Button fx:id="pos50" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.rowIndex="5"/>
+            <Button fx:id="pos51" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <Button fx:id="pos52" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+            <Button fx:id="pos53" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+            <Button fx:id="pos54" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+            <Button fx:id="pos55" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="5"/>
+            <Button fx:id="pos56" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="5"/>
+            <Button fx:id="pos57" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="5"/>
+            <Button fx:id="pos60" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.rowIndex="6"/>
+            <Button fx:id="pos61" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+            <Button fx:id="pos62" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+            <Button fx:id="pos63" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="6"/>
+            <Button fx:id="pos64" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="6"/>
+            <Button fx:id="pos65" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="6"/>
+            <Button fx:id="pos66" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="6"/>
+            <Button fx:id="pos67" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="6"/>
+            <Button fx:id="pos70" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.rowIndex="7"/>
+            <Button fx:id="pos71" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+            <Button fx:id="pos72" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+            <Button fx:id="pos73" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="3" GridPane.rowIndex="7"/>
+            <Button fx:id="pos74" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="4" GridPane.rowIndex="7"/>
+            <Button fx:id="pos75" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="5" GridPane.rowIndex="7"/>
+            <Button fx:id="pos76" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="6" GridPane.rowIndex="7"/>
+            <Button fx:id="pos77" mnemonicParsing="false" onMouseClicked="#handlePositionInput" prefHeight="49.0"
+                    prefWidth="53.0" GridPane.columnIndex="7" GridPane.rowIndex="7"/>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <left>
+      <TextArea prefHeight="240.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </BorderPane.margin>
+      </TextArea>
+   </left>
+</BorderPane>
