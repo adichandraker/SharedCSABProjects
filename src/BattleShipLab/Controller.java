@@ -1,13 +1,14 @@
 package BattleShipLab;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 
-public class Controller {
+public class Controller implements EventHandler<ActionEvent> {
 
-    @FXML
-    protected void handlePositionInput(ActionEvent event) {
-
+    @Override
+    public void handle(ActionEvent event) {
+        System.out.println("hello");
     }
 
 }
