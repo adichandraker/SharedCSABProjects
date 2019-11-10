@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4cbe286-bf06-4aff-99aa-129cb2312cbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BattleShipLab/BattleShipViewBoardtemp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/BattleShipViewBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/BattleShipViewBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/BattleShipViewBoard.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Main.java" afterDir="false" />
     </list>
@@ -124,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573352876054</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GUI update 3">
+      <created>1573354181737</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573354181737</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +150,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="GUI update 1" />
     <MESSAGE value="GUI update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI update 2" />
+    <MESSAGE value="GUI update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI update 3" />
   </component>
 </project>
