@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Board {
 
-    Coordinate [] [] grid;
+    Coordinate[][] grid;
 
-    public Coordinate generateCoordinatePos (int xCor, int yCor) {
+    public Coordinate generateCoordinatePos(int xCor, int yCor) {
         Coordinate newCoordinate = new Coordinate(xCor, yCor);
         return newCoordinate;
     }
 
     public Board() {
-        grid = new Coordinate [10] [10];
+        grid = new Coordinate[10][10];
     }
 
     public void guess() {
@@ -29,7 +29,7 @@ public class Board {
         }
     }
 
-    public void checkCoordinate (int xCor, int yCor) {
+    public void checkCoordinate(int xCor, int yCor) {
         if (grid[xCor][yCor] == null) {
             Coordinate c = generateCoordinatePos(xCor, yCor);
             grid[xCor][yCor] = c;

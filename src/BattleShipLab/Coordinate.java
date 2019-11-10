@@ -6,7 +6,7 @@ public class Coordinate {
     private int yCoordinate;
     private int stateOfCoordinate;
 
-    public Coordinate (int xCor, int yCor) {
+    public Coordinate(int xCor, int yCor) {
         xCoordinate = xCor;
         yCoordinate = yCor;
         stateOfCoordinate = 0;

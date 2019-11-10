@@ -13,22 +13,27 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class View extends Application {
 
     BorderPane borderPane;
     TextArea catalog;
+    GridPane gridPane;
+
+    public View() {
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         borderPane = new BorderPane();
         catalog = new TextArea();
+        catalog.setEditable(false);
+        catalog.setText("Welcome to Battleship");
 
         catalog.setPrefHeight(100);
         catalog.setPrefWidth(200);
-        HBox leftSide = new HBox(catalog);
-        leftSide.setPadding(new Insets(10, 10, 10, 10));
+        catalog.setPadding(new Insets(10, 10, 10, 10));
 
-        GridPane gridPane = new GridPane();
+        gridPane = new GridPane();
         gridPane.setPadding(new Insets(10, 10, 10, 10));
 
         for (int i = 0; i < 10; i++) {
@@ -52,7 +57,7 @@ public class Main extends Application {
         }
 
 
-        borderPane.setLeft(leftSide);
+        borderPane.setLeft(catalog);
         borderPane.setCenter(gridPane);
 
         primaryStage.setTitle("BattleShip");
