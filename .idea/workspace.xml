@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4cbe286-bf06-4aff-99aa-129cb2312cbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/BattleShipViewBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Coordinate.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573268436365</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="GUI update 2">
+      <created>1573352666625</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573352666625</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="GUI update 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI update 1" />
+    <MESSAGE value="GUI update 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI update 2" />
   </component>
 </project>
