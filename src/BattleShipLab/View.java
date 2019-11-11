@@ -66,7 +66,7 @@ public class View extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void startTheGUI(String[] args) {
         launch(args);
     }
 }

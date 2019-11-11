@@ -11,8 +11,9 @@ public class Controller {
     private static View v = new View();
     private Board b;
 
+
     public static void main(String[] args) {
-        v.main(args);
+        v.startTheGUI(args);
 
     }
 
