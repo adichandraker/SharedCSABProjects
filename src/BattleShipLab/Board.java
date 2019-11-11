@@ -36,4 +36,11 @@ public class Board {
         }
     }
 
+    public void setTheShipPosition(Ship s) {
+    }
+
+    public void setDefaultShips(){
+
+    }
+
 }

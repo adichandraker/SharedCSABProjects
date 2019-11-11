@@ -9,11 +9,12 @@ import javafx.scene.paint.Color;
 public class Controller {
 
     private static View v = new View();
-    private Board b;
+    private static Board b;
 
 
     public static void main(String[] args) {
         v.startTheGUI(args);
+        b.setDefaultShips();
 
     }
 
