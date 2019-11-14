@@ -28,4 +28,5 @@ public class Coordinate {
     public int getStateOfCoordinate() {
         return stateOfCoordinate;
     }
+
 }

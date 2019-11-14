@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4cbe286-bf06-4aff-99aa-129cb2312cbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BattleShipLab/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/Coordinate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BattleShipLab/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleShipLab/View.java" afterDir="false" />
@@ -173,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573439295346</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Logic change update 6">
+      <created>1573695948241</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573695948241</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +202,7 @@
     <MESSAGE value="GUI update 4" />
     <MESSAGE value="classes update 4" />
     <MESSAGE value="classes update 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="classes update 5" />
+    <MESSAGE value="Logic change update 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logic change update 6" />
   </component>
 </project>

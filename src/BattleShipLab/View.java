@@ -29,6 +29,9 @@ public class View extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        controller.getBoard().setDefaultShips();
+
         borderPane = new BorderPane();
         catalog = new TextArea();
         catalog.setEditable(false);
@@ -51,10 +54,14 @@ public class View extends Application {
                 b.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        guess();
-                        Color c = Color.RED;
-                        System.out.println(b.getId());
-                        b.setStyle("-fx-background-color: #a30f0f");
+                        if(controller.checkThatGuess() == 0) {
+                            System.out.println(b.getId());
+                            b.setStyle("-fx-background-color: #a30f0f");
+                        }
+                        else if(controller.checkThatGuess() == 1){
+                            System.out.println(b.getId());
+                            b.setStyle("-fx-background-color: #10c218");
+                        }
                     }
                 });
 
@@ -71,8 +78,6 @@ public class View extends Application {
         primaryStage.show();
     }
 
-    private void guess() {
-    }
 
 
     public static void startTheGUI(String[] args) {
