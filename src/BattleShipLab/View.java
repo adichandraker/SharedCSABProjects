@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 
 public class View extends Application {
 
-    Controller controller;
     BorderPane borderPane;
     TextArea catalog;
     GridPane gridPane;
@@ -23,14 +22,8 @@ public class View extends Application {
     public View() {
     }
 
-    public View(Controller c) {
-        controller = c;
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-        controller.getBoard().setDefaultShips();
 
         borderPane = new BorderPane();
         catalog = new TextArea();
@@ -54,14 +47,14 @@ public class View extends Application {
                 b.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        if(controller.checkThatGuess() == 0) {
-                            System.out.println(b.getId());
+                        /*if(controller.checkThatGuess() == 0 ) {
+                            //System.out.println(b.getId());
                             b.setStyle("-fx-background-color: #a30f0f");
                         }
                         else if(controller.checkThatGuess() == 1){
-                            System.out.println(b.getId());
-                            b.setStyle("-fx-background-color: #10c218");
-                        }
+                            //System.out.println(b.getId());
+                            b.setStyle("-fx-background-color: #0fa616");
+                        }*/
                     }
                 });
 
@@ -78,9 +71,8 @@ public class View extends Application {
         primaryStage.show();
     }
 
-
-
     public static void startTheGUI(String[] args) {
         launch(args);
     }
+
 }
