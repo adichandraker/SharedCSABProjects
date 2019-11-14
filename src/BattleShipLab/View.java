@@ -15,11 +15,16 @@ import javafx.stage.Stage;
 
 public class View extends Application {
 
+    Controller controller;
     BorderPane borderPane;
     TextArea catalog;
     GridPane gridPane;
 
     public View() {
+    }
+
+    public View(Controller c) {
+        controller = c;
     }
 
     @Override
@@ -46,6 +51,7 @@ public class View extends Application {
                 b.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
+                        guess();
                         Color c = Color.RED;
                         System.out.println(b.getId());
                         b.setStyle("-fx-background-color: #a30f0f");
@@ -63,6 +69,9 @@ public class View extends Application {
         primaryStage.setTitle("BattleShip");
         primaryStage.setScene(new Scene(borderPane, 640, 395));
         primaryStage.show();
+    }
+
+    private void guess() {
     }
 
 

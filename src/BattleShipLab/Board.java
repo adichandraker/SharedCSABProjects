@@ -1,45 +1,56 @@
 package BattleShipLab;
 
-import java.util.Scanner;
+import java.util.Random;
+import static BattleShipLab.Coordinate.getACoordinate;
 
 public class Board {
 
-    Coordinate[][] grid;
+    private final int SIZEOFBOARD = 10;
+    private final int WIDTHOFSHIP = 1;
 
-    public Coordinate generateCoordinatePos(int xCor, int yCor) {
-        Coordinate newCoordinate = new Coordinate(xCor, yCor);
-        return newCoordinate;
-    }
+    private Coordinate[][] grid;
+    private static Random generator = new Random();
+
 
     public Board() {
-        grid = new Coordinate[10][10];
+        grid = new Coordinate[SIZEOFBOARD][SIZEOFBOARD];
     }
 
-    public void guess() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("What is the x-coordinate of the point you wish to guess?  (Enter a number, 0 through 9.)");
-        int xGuess = input.nextInt();
-        System.out.println("Okay, and the y-coordinate?");
-        int yGuess = input.nextInt();
-        if ((xGuess < 0) || (xGuess > 9) || (yGuess < 0) || (yGuess > 9)) {
-            System.out.println("Sorry, those coordinates do not exist.  Try again!");
-            guess();
-        } else {
-            checkCoordinate(xGuess, yGuess);
+
+
+    public void setTheShipPosition(int length) {
+
+        boolean direction = generator.nextBoolean();
+
+        int startCoord = generator.nextInt(99);
+        int xCoord = startCoord / 10;
+        int yCoord = startCoord % 10;
+
+
+        // Check if go off board
+        if (xCoord + length > SIZEOFBOARD) {
+            direction = false; // will go up down
         }
-    }
-
-    public void checkCoordinate(int xCor, int yCor) {
-        if (grid[xCor][yCor] == null) {
-            Coordinate c = generateCoordinatePos(xCor, yCor);
-            grid[xCor][yCor] = c;
+        if (yCoord + length > SIZEOFBOARD) {
+            direction  = true; // will go left to right
         }
+
+        for(int i = 0; i<WIDTHOFSHIP + 2; i++){
+            for (int j = 0; i< length + 2; j++){
+                if(grid[i][j].getStateOfCoordinate() < 0 || grid[i][j].getStateOfCoordinate() == 2)
+                    setTheShipPosition(length);
+            }
+        }
+
+        grid[xCoord][yCoord] = getACoordinate(grid, xCoord, yCoord);
     }
 
-    public void setTheShipPosition(Ship s) {
-    }
-
-    public void setDefaultShips(){
+    public void setDefaultShips() {
+        setTheShipPosition(5);
+        setTheShipPosition(4);
+        setTheShipPosition(3);
+        setTheShipPosition(3);
+        setTheShipPosition(2);
 
     }
 
