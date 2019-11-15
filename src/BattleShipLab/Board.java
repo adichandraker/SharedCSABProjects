@@ -5,6 +5,7 @@ import static BattleShipLab.Coordinate.getACoordinate;
 
 public class Board {
 
+    private View copyOfView;
     private final int SIZEOFBOARD = 10;
     private final int WIDTHOFSHIP = 1;
 
@@ -42,7 +43,10 @@ public class Board {
             }
         }
 
-        grid[xCoord][yCoord] = getACoordinate(grid, xCoord, yCoord);
+    }
+
+    public void getView(View v){
+
     }
 
     public void setDefaultShips() {

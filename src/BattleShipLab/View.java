@@ -15,10 +15,18 @@ import javafx.stage.Stage;
 
 public class View extends Application {
 
-    BorderPane borderPane;
-    TextArea catalog;
-    GridPane gridPane;
+    private static Controller c;
+    private BorderPane borderPane;
+    private TextArea catalog;
+    private GridPane gridPane;
 
+    public TextArea getCatalog() {
+        return catalog;
+    }
+
+    public View(Controller c) {
+        this.c = c;
+    }
     public View() {
     }
 
@@ -47,14 +55,7 @@ public class View extends Application {
                 b.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        /*if(controller.checkThatGuess() == 0 ) {
-                            //System.out.println(b.getId());
-                            b.setStyle("-fx-background-color: #a30f0f");
-                        }
-                        else if(controller.checkThatGuess() == 1){
-                            //System.out.println(b.getId());
-                            b.setStyle("-fx-background-color: #0fa616");
-                        }*/
+                        catalog.setText(" " + c.checkThatGuess());
                     }
                 });
 

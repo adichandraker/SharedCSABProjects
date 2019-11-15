@@ -7,18 +7,13 @@ public class Coordinate {
     private int stateOfCoordinate;
 
     private Coordinate(int xCor, int yCor) {
-
         xCoordinate = xCor;
         yCoordinate = yCor;
         stateOfCoordinate = 0;
     }
 
-    public static Coordinate getACoordinate(Coordinate[][] gridCopy, int xCor, int yCor) {
-        if (gridCopy[xCor][yCor] == null) {
-            return new Coordinate(xCor, yCor);
-        }
-        return gridCopy[xCor][yCor];
-
+    public static Coordinate getACoordinate(int xCor, int yCor) {
+        return new Coordinate(xCor, yCor);
     }
 
     public void changeState(int newState) {
