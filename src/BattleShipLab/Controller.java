@@ -17,10 +17,6 @@ public class Controller {
     public static void main(String[] args) {
         myInstance = new Controller();
         b = new Board();
-        b.getGrid()[0][0] = new Coordinate(0,0,1);
-        b.getGrid()[1][0] = new Coordinate(1,0,1);
-        b.getGrid()[2][0] = new Coordinate(1,0,1);
-        b.getGrid()[2][1] = new Coordinate(1,0,1);
         v = new View(myInstance);
         v.startTheGUI(args);
 

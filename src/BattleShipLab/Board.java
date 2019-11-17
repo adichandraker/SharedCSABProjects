@@ -23,35 +23,75 @@ public class Board {
                 grid[i][j] = new Coordinate(i,j);
             }
         }
+        setDefaultShips();
     }
 
 
 
     public void setTheShipPosition(int length) {
-
-        boolean direction = generator.nextBoolean();
-
-        int startCoord = generator.nextInt(99);
-        int xCoord = startCoord / 10;
-        int yCoord = startCoord % 10;
-
-
-        // Check if go off board
-        if (xCoord + length > SIZEOFBOARD) {
-            direction = false; // will go up down
-        }
-        if (yCoord + length > SIZEOFBOARD) {
-            direction  = true; // will go left to right
-        }
-
-        for(int i = 0; i<WIDTHOFSHIP + 2; i++){
-            for (int j = 0; i< length + 2; j++){
-                if(grid[i][j].getStateOfCoordinate() < 0 || grid[i][j].getStateOfCoordinate() == 2)
-                    setTheShipPosition(length);
+        boolean horizOrNot = generator.nextBoolean();
+        int xCoorStart = generator.nextInt(9);
+        int yCoorStart = generator.nextInt(9);
+        int coordsToFix = 0; //to erase ships from the board, if needed
+        if (horizOrNot == true) {
+            if (!(xCoorStart + length > grid.length)) {
+                for (int i = xCoorStart; i < xCoorStart + length; ++i) {
+                    if (grid[i][yCoorStart].getStateOfCoordinate() != 2) {
+                       grid[i][yCoorStart].changeState(2);
+                        ++coordsToFix;
+                    } else {
+                        for (int j = xCoorStart; j < xCoorStart + coordsToFix; ++j) {
+                            grid[j][yCoorStart].changeState(-1);
+                        }
+                        setTheShipPosition(length);
+                    }
+                    coordsToFix = 0;
+                }
+            } else {
+                for (int i = xCoorStart; i > xCoorStart - length; --i) {
+                    if (grid[i][yCoorStart].getStateOfCoordinate() != 2) {
+                        grid[i][yCoorStart].changeState(2);
+                        ++coordsToFix;
+                    } else {
+                        for (int j = xCoorStart; j < xCoorStart + coordsToFix; ++j) {
+                            grid[j][yCoorStart].changeState(-1);
+                        }
+                        coordsToFix = 0;
+                        setTheShipPosition(length);
+                    }
+                }
+            }
+        } else {
+            if (!(yCoorStart + length > grid.length)) {
+                for (int i = yCoorStart; i < yCoorStart + length; ++i) {
+                    if (grid[xCoorStart][i].getStateOfCoordinate() != 2) {
+                        grid[xCoorStart][i].changeState(2);
+                        ++coordsToFix;
+                    } else {
+                        for (int j = yCoorStart; j < yCoorStart + coordsToFix; ++j) {
+                            grid[xCoorStart][j].changeState(-1);
+                        }
+                        coordsToFix = 0;
+                        setTheShipPosition(length);
+                    }
+                }
+            } else {
+                for (int i = yCoorStart; i > yCoorStart - length; --i) {
+                    if (grid[xCoorStart][i].getStateOfCoordinate() != 2) {
+                        grid[xCoorStart][i].changeState(2);
+                        ++coordsToFix;
+                    } else {
+                        for (int j = yCoorStart; j < yCoorStart + coordsToFix; ++j) {
+                            grid[xCoorStart][j].changeState(-1);
+                        }
+                        coordsToFix = 0;
+                        setTheShipPosition(length);
+                    }
+                }
             }
         }
-
     }
+
 
     public void setDefaultShips() {
         setTheShipPosition(5);
