@@ -28,11 +28,23 @@ public class Controller {
     }
 
 
-    public int checkThatGuess() {
-        return 1;
+    public int checkThatGuess(int xCoor, int yCoor) {
+
+        if(b.getGrid()[xCoor][yCoor] == null){
+            b.getGrid()[xCoor][yCoor] = new Coordinate(xCoor,yCoor);
+        }
+
+        Coordinate checkCoordinate = b.getGrid()[xCoor][yCoor];
+        int checkState = checkCoordinate.getStateOfCoordinate();
+
+        if(checkState == 2){
+            checkCoordinate.changeState(1);
+            return 1;
+        } else {
+            return checkState;
+        }
+
     }
 
-    public void handle(ActionEvent event) {
-        v.getCatalog().setText(" " + checkThatGuess());
-    }
+
 }

@@ -20,10 +20,6 @@ public class View extends Application {
     private TextArea catalog;
     private GridPane gridPane;
 
-    public TextArea getCatalog() {
-        return catalog;
-    }
-
     public View(Controller c) {
         this.c = c;
     }
@@ -55,7 +51,21 @@ public class View extends Application {
                 b.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        catalog.setText(" " + c.checkThatGuess());
+                        String splitThis = b.getId();
+                        String [] numbers = splitThis.split("");
+                        int xCoor = Integer.parseInt(numbers[3]);
+                        int yCoor = Integer.parseInt(numbers[4]);
+
+                        if(c.checkThatGuess(xCoor, yCoor) == 0 ) {
+                            catalog.setText("miss");
+                            b.setStyle("-fx-background-color: #a30f0f");
+                        }
+                        else if(c.checkThatGuess(xCoor, yCoor) == 1){
+                            catalog.setText("hit");
+                            b.setStyle("-fx-background-color: #0fa616");
+                        }else {
+                            catalog.setText("weird");
+                        }
                     }
                 });
 

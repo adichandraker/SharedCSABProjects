@@ -1,15 +1,13 @@
 package BattleShipLab;
 
 import java.util.Random;
-import static BattleShipLab.Coordinate.getACoordinate;
 
 public class Board {
 
-    private View copyOfView;
     private final int SIZEOFBOARD = 10;
     private final int WIDTHOFSHIP = 1;
 
-    private Coordinate[][] grid;
+    private static Coordinate[][] grid;
     private static Random generator = new Random();
 
 
@@ -45,10 +43,6 @@ public class Board {
 
     }
 
-    public void getView(View v){
-
-    }
-
     public void setDefaultShips() {
         setTheShipPosition(5);
         setTheShipPosition(4);
@@ -58,4 +52,7 @@ public class Board {
 
     }
 
+    public Coordinate[][] getGrid() {
+        return grid;
+    }
 }

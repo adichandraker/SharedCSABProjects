@@ -6,14 +6,10 @@ public class Coordinate {
     private int yCoordinate;
     private int stateOfCoordinate;
 
-    private Coordinate(int xCor, int yCor) {
+    public Coordinate(int xCor, int yCor) {
         xCoordinate = xCor;
         yCoordinate = yCor;
         stateOfCoordinate = 0;
-    }
-
-    public static Coordinate getACoordinate(int xCor, int yCor) {
-        return new Coordinate(xCor, yCor);
     }
 
     public void changeState(int newState) {
