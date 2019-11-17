@@ -5,6 +5,11 @@ import java.util.Random;
 public class Board {
 
     private final int SIZEOFBOARD = 10;
+
+    public int getSIZEOFBOARD() {
+        return SIZEOFBOARD;
+    }
+
     private final int WIDTHOFSHIP = 1;
 
     private static Coordinate[][] grid;
@@ -13,6 +18,11 @@ public class Board {
 
     public Board() {
         grid = new Coordinate[SIZEOFBOARD][SIZEOFBOARD];
+        for (int i = 0; i < SIZEOFBOARD; i++) {
+            for (int j = 0; j < SIZEOFBOARD; j++) {
+                grid[i][j] = new Coordinate(i,j);
+            }
+        }
     }
 
 
