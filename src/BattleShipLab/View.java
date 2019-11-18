@@ -10,8 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class View extends Application {
@@ -24,6 +22,7 @@ public class View extends Application {
     public View(Controller c) {
         this.c = c;
     }
+
     public View() {
     }
 
@@ -53,25 +52,25 @@ public class View extends Application {
                     @Override
                     public void handle(ActionEvent event) {
                         String splitThis = b.getId();
-                        String [] numbers = splitThis.split("");
+                        String[] numbers = splitThis.split("");
                         int xCoor = Integer.parseInt(numbers[3]);
                         int yCoor = Integer.parseInt(numbers[4]);
-
-                        if(c.checkThatGuess(xCoor, yCoor) == 0 ) {
+                        if (c.checkThatGuess(xCoor, yCoor) == 0) {
                             catalog.setText("miss");
                             b.setStyle("-fx-background-color: #a30f0f");
-                        }
-                        else if(c.checkThatGuess(xCoor, yCoor) == 1){
+                        } else if (c.checkThatGuess(xCoor, yCoor) == 1) {
                             catalog.setText("hit");
                             b.setStyle("-fx-background-color: #0fa616");
-
-                            int association = c.getCoordinate(xCoor,yCoor).getAssociation();
-                            if(association > 0){
-                                if(c.areAllAssociatedShipsSunk(association))
+                            int association = c.getCoordinate(xCoor, yCoor).getAssociation();
+                            if (association > 0) {
+                                if (c.areAllAssociatedShipsSunk(association))
                                     sinkWholeShip(association);
                             }
-                        }else {
+                        } else {
                             catalog.setText("weird");
+                        }
+                        if (c.isGameOver() == true) {
+                            catalog.setText("You won!");
                         }
                     }
                 });
@@ -93,16 +92,15 @@ public class View extends Application {
         launch(args);
     }
 
-    public void sinkWholeShip(int asoc){
+    public void sinkWholeShip(int asoc) {
 
         catalog.setText("sunk ship");
-
         for (int i = 0; i < c.getBoard().getSIZEOFBOARD(); i++) {
             for (int j = 0; j < c.getBoard().getSIZEOFBOARD(); j++) {
                 Coordinate check = c.getBoard().getGrid()[i][j];
-                if(check.getAssociation() == asoc) {
+                if (check.getAssociation() == asoc) {
                     for (Node node : gridPane.getChildren()) {
-                        if ((int)GridPane.getRowIndex(node) == j && (int)GridPane.getColumnIndex(node) == i) {
+                        if ((int) GridPane.getRowIndex(node) == j && (int) GridPane.getColumnIndex(node) == i) {
                             Button b = (Button) node;
                             b.setStyle("-fx-background-color: #000000");
                         }
@@ -110,19 +108,6 @@ public class View extends Application {
                 }
             }
         }
-
     }
 
-    /*for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 7; j++) {
-            for (Node node : grid.getChildren()) {
-                if (grid.getRowIndex(node) == i && grid.getColumnIndex(node) == j) {
-                    Button b = (Button)node;
-                    b.setText(ar[i][j]+"");
-                    System.out.println("z:" + i+" "+j);
-                    break;
-                }
-            }
-        }
-    }*/
 }

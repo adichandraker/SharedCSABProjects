@@ -1,10 +1,5 @@
 package BattleShipLab;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-
 public class Controller {
 
     private static Controller myInstance;
@@ -19,8 +14,6 @@ public class Controller {
         b = new Board();
         v = new View(myInstance);
         v.startTheGUI(args);
-
-
     }
 
     public Board getBoard() {
@@ -57,6 +50,22 @@ public class Controller {
                     if(checkCoordinate.getStateOfCoordinate() != 1) {
                         return false;
                     }
+                }
+            }
+        }
+        return true;
+    }
+
+    public boolean isGameOver() {
+        Board b = getBoard();
+        Coordinate [] [] test = b.getGrid();
+        for (int i = 0; i < b.getSIZEOFBOARD(); ++i) {
+            for (int j = 0; j < b.getSIZEOFBOARD(); ++j) {
+                if (test[i][j].getStateOfCoordinate() == 1) {
+                    continue;
+                }
+                if (test[i][j].getAssociation() != 0) {
+                    return false;
                 }
             }
         }

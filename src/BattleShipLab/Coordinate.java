@@ -33,4 +33,9 @@ public class Coordinate {
         return association;
     }
 
+    public void setAssociation(int association) {
+        this.association = association;
+    }
+
+
 }
